@@ -1,0 +1,29 @@
+﻿<Window x:Class="RAD.Admin_UpdateUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RAD"
+        mc:Ignorable="d"
+        Title="Admin_Update" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="105,110,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="221,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Firstname" HorizontalAlignment="Left" Margin="107,173,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Margin="221,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Lastname" HorizontalAlignment="Left" Margin="108,234,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastname" HorizontalAlignment="Left" Margin="221,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Mobile" HorizontalAlignment="Left" Margin="116,295,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMobile" HorizontalAlignment="Left" Margin="221,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="460,110,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="577,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="577,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="486,199,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_update" Content="Update Administrator" HorizontalAlignment="Left" Margin="460,342,0,0" VerticalAlignment="Top" Click="btn_update_Click"/>
+        <Button x:Name="btn_back" Content="Back" HorizontalAlignment="Left" Margin="637,352,0,0" VerticalAlignment="Top" Click="btn_back_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="RAD.Admin_AddDoctor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RAD"
+        mc:Ignorable="d"
+        Title="Admin_AddDoctor" Height="450" Width="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Username" HorizontalAlignment="Left" Margin="85,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="208,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Firstname" HorizontalAlignment="Left" Margin="85,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.59,-0.985"/>
+        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Margin="208,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Lastname" HorizontalAlignment="Left" Margin="86,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastname" HorizontalAlignment="Left" Margin="208,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Mobile" HorizontalAlignment="Left" Margin="92,257,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMobile" HorizontalAlignment="Left" Margin="208,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="427,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="567,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="427,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="438,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="567,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCpassword" HorizontalAlignment="Left" Margin="567,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="457,257,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="567,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_addDoctor" Content="Add Doctor" HorizontalAlignment="Left" Margin="345,342,0,0" Click="Button_Click"/>
+        <Button x:Name="btn_back" Content="Back" HorizontalAlignment="Left" Margin="543,342,0,0" Click="btn_back_Click"/>
+    </Grid>
+</Window>

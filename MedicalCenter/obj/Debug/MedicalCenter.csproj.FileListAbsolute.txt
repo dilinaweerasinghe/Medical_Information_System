@@ -1,0 +1,16 @@
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\bin\Debug\MedicalCenter.exe.config
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\bin\Debug\MedicalCenter.exe
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\bin\Debug\MedicalCenter.pdb
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.csproj.AssemblyReference.cache
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\App.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter_MarkupCompile.cache
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter_MarkupCompile.lref
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.g.resources
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.Properties.Resources.resources
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.csproj.GenerateResource.cache
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.csproj.CoreCompileInputs.cache
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.exe
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.pdb
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\loginForm.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\loginForm.baml
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\GeneratedInternalTypeHelper.g.cs

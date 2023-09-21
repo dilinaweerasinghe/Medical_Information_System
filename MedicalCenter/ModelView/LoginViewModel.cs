@@ -1,4 +1,6 @@
 ﻿using MedicalCenter.Model;
+using MedicalCenter.ModelView.Doctor;
+using MedicalCenter.View.Doctor;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,13 +12,11 @@ using System.Windows.Input;
 
 namespace MedicalCenter.ModelView
 {
-    public class LoginViewModel : LoginModelBase
+    public class LoginViewModel : ModelBase
     {
         private string _username;
         private string _password;
         private string _loginType = "Administrator";
-        private string _errorMessage;
-        private bool _isViewVisible = true;
         private ObservableCollection<User> _users;
         private User targetUser;
 
@@ -63,33 +63,7 @@ namespace MedicalCenter.ModelView
             }
         }
 
-        public string ErrorMessage
-        {
-            get
-            {
-                    return _errorMessage;
-            }
-
-            set
-            {
-                _errorMessage = value;
-                OnPropertyChanged(nameof(ErrorMessage));
-            }
-        }
-
-        public bool IsViewVisible
-        {
-            get
-            {
-                return _isViewVisible;
-            }
-
-            set
-            {
-                _isViewVisible = value;
-                OnPropertyChanged(nameof(IsViewVisible));
-            }
-        }
+        
 
         public ObservableCollection<User> Users
         {
@@ -120,7 +94,7 @@ namespace MedicalCenter.ModelView
 
         public LoginViewModel()
         {
-            LoginbtCommand = new LoginCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
+            LoginbtCommand = new RelayCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             Users = new ObservableCollection<User>();
            
         }
@@ -145,7 +119,10 @@ namespace MedicalCenter.ModelView
                 {
                     if(Password == validation.PasswordValidate(Username)) 
                     {
-                        MessageBox.Show("Login Successful!", "Login Sucessful", MessageBoxButton.OK, MessageBoxImage.Information);
+                        
+                       
+                        
+                       
                     }
                     else
                     {

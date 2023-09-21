@@ -65,5 +65,26 @@ namespace MedicalCenter.Model
             return password;
         }
 
+        public bool LoginTypeValidation(string username, string userType)
+        {
+            bool result = false;
+            Connection connection = new Connection();
+            using (SqlConnection conn = connection.DBConnect())
+            {
+                string quary = "SELECT usertype FROM users WHERE username = @USername";
+                using (SqlCommand cmd = new SqlCommand(quary, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    string lgtype = cmd.ExecuteScalar().ToString();
+
+                    if(lgtype == userType)
+                    {
+                        result = true;
+                    }
+                }
+            }
+            return result;
+        }
+
     }
 }

@@ -14,3 +14,15 @@ G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\M
 G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\loginForm.g.cs
 G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\loginForm.baml
 G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\Prescription.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\Prescription.baml
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\PatientHistory.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\PatientHistory.baml
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\bin\Debug\Prism.dll
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\bin\Debug\Prism.pdb
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\bin\Debug\Prism.xml
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\MedicalCenter.csproj.CopyComplete
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\DoctorWindow.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\DoctorWindow.baml
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\Waiting_patient_list.g.cs
+G:\UOR - 2nd Year - 2nd Semester\RAD - C# Practical\Practical-10\MedicalCenter\MedicalCenter\obj\Debug\View\Doctor\Waiting_patient_list.baml

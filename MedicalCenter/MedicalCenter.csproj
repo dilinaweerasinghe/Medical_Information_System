@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -56,12 +59,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AttachedProperties\PasswordBoxHelper.cs" />
-    <Compile Include="ModelView\LoginModelBase.cs" />
-    <Compile Include="ModelView\LoginCommand.cs" />
+    <Compile Include="ModelView\Doctor\PatientHistoryViewModel.cs" />
+    <Compile Include="ModelView\Doctor\PrescriptionViewModel.cs" />
+    <Compile Include="ModelView\ModelBase.cs" />
+    <Compile Include="ModelView\RelayCommand.cs" />
     <Compile Include="ModelView\LoginViewModel.cs" />
     <Compile Include="Model\Connection.cs" />
+    <Compile Include="Model\Doctor\Drugdetails.cs" />
+    <Compile Include="Model\Doctor\Patient.cs" />
     <Compile Include="Model\LoginValidation.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="View\Doctor\PatientHistory.xaml.cs">
+      <DependentUpon>PatientHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\Prescription.xaml.cs">
+      <DependentUpon>Prescription.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
     </Compile>
@@ -69,6 +82,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Doctor\PatientHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\Prescription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +120,7 @@
     <Resource Include="Fonts\Poppins-ExtraBold.ttf" />
     <Resource Include="Fonts\Poppins-ExtraBoldItalic.ttf" />
     <Resource Include="Fonts\Poppins-ExtraLight.ttf" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,17 +131,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ModelView\Admin\" />
-    <Folder Include="ModelView\Doctor\" />
     <Folder Include="ModelView\Pharmasist\" />
     <Folder Include="Model\Admin\" />
-    <Folder Include="Model\Doctor\" />
     <Folder Include="Model\Pharmasist\" />
     <Folder Include="View\Admin\" />
-    <Folder Include="View\Doctor\" />
     <Folder Include="View\Pharmasist\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ruhlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btn1.jpeg" />
+    <Resource Include="Images\btn2.jpg" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\person.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

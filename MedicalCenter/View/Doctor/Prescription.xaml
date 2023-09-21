@@ -1,0 +1,323 @@
+﻿<Window x:Class="MedicalCenter.View.Doctor.Prescription"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedicalCenter.View.Doctor" xmlns:doctor="clr-namespace:MedicalCenter.ModelView.Doctor" d:DataContext="{d:DesignInstance Type=doctor:PrescriptionViewModel}"
+        mc:Ignorable="d"
+        Title="Login" Height="768" Width="1024"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        >
+    <Grid>
+        <StackPanel>
+            <Border Height="150" Background="#91202D">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="13" Direction="270" Color="Black" Opacity="0.6" BlurRadius="20"/>
+                </Border.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="logo" Source="/Images/ruhlogo.png" Height="120" Width="110" Margin="30,5,0,0" IsEnabled="False"/>
+                    <StackPanel Width="220px">
+                        <Label Content="MEDICAL CENTER" Margin="0,42,0,0" Foreground="White" FontSize="26" FontFamily="Calibri"/>
+                        <Label Content="University of Ruhuna" Margin="0,-10,0,0" Foreground="White" FontSize="18"/>
+                    </StackPanel>
+                    <Border Width="100" Height="100" Background="White" CornerRadius="60" Margin="230,6,0,0">
+                        <Image x:Name="userdp" Source="{Binding ImageURL}" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" RenderTransformOrigin="-0.193,-0.402" />
+                    </Border>
+                    <StackPanel Width="270px" Margin="30,0,0,0">
+                        <TextBox 
+                            x:Name="username"
+                            Text="{Binding Username}"
+                            FontSize="18" FontFamily="Arial"
+                            Background="Transparent"
+                            BorderBrush="Black" Width="250"
+                            BorderThickness="0,0,0,0"
+                            Margin="0,30,0,0"
+                            IsReadOnly="True" Foreground="White"
+                            >
+
+                        </TextBox>
+                        <TextBox
+                            x:Name="name"
+                            Text="{Binding Name}"
+                            FontSize="18" FontFamily="Arial"
+                            Background="Transparent"
+                            BorderBrush="Black" Width="250"
+                            BorderThickness="0,0,0,0"
+                            Margin="10"
+                            IsReadOnly="True" Foreground="White"
+                            >
+
+                        </TextBox>
+                        <Button x:Name="Logout"
+                                Margin="0,5,0,0"
+                                Width="120"
+                                Height="30"
+                                Content="Logout"
+                                Cursor="Hand"
+                                Grid.Column="2"
+                                Foreground="White" FontSize="18" FontFamily="Arial" FontWeight="Bold"
+                                Command="{Binding LoginbtCommand}" Background="#FFC88E95"  
+                                >
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#91202D"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#CC2134"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="120" Height="30" CornerRadius="15" Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border>
+                <StackPanel>
+                    <StackPanel Height="100" Orientation="Horizontal">
+                        <Button x:Name="back"
+                                    Margin="30,5,0,0"
+                                    Width="150"
+                                    Height="50"
+                                    Content="Back"
+                                    Cursor="Hand"
+                                    Grid.Column="2"
+                                    Foreground="White" FontSize="18" FontFamily="Arial" FontWeight="Bold"
+                                    Command="{Binding YourCommand}" Background="#FF91202D">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#91202D"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#CC2134"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="150" Height="50" CornerRadius="25" Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Label Content="Patient's Details" Foreground="#FF91202D" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="DemiBold" Margin="190,0,0,0" FontFamily="Calibri"/>
+                        <Button x:Name="SendPrescription"
+                                Margin="100,5,0,0"
+                                Width="250"
+                                Height="50"
+                                Content="Send Prescription"
+                                Cursor="Hand"
+                                Grid.Column="2"
+                                Foreground="White" FontSize="18" FontFamily="Arial" FontWeight="Bold"
+                                Command="{Binding YourCommand}" Background="#FF91202D" Click="SendPrescription_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#91202D"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#CC2134"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="250" Height="50" CornerRadius="25" Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                    <Border Margin="20,-10,20,0">
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="8" Direction="320" Color="Black" Opacity="0.4" BlurRadius="30"/>
+                        </Border.Effect>
+                        <StackPanel Height="120" Orientation="Horizontal">
+                            <StackPanel Width="140px" Margin="30,0,0,20">
+                                <Label Content="Student Id" Margin="0,20,0,0" FontWeight="Bold" FontFamily="Arial" FontSize="18" HorizontalAlignment="Center"></Label>
+                                <TextBox 
+                                        x:Name="stId"
+                                        Text="{Binding Patient.StudentId}"
+                                        FontSize="18" FontFamily="Arial"
+                                        Background="Transparent"
+                                        BorderBrush="Black" Width="140"
+                                        BorderThickness="1,1,1,1"
+                                        Margin="0,20,0,0"
+                                        IsReadOnly="True"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Width="250px" Margin="30,0,0,20">
+                                <Label Content="Patients Name" Margin="0,20,0,0" FontWeight="Bold" FontFamily="Arial" FontSize="18" HorizontalAlignment="Center"></Label>
+                                <TextBox 
+                                        x:Name="stName"
+                                        Text="{Binding Patient.Name}"
+                                        FontSize="18" FontFamily="Arial"
+                                        Background="Transparent"
+                                        BorderBrush="Black" Width="250px"
+                                        BorderThickness="1,1,1,1"
+                                        Margin="0,20,0,0"
+                                        IsReadOnly="True"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Width="120px" Margin="30,0,0,20">
+                                <Label Content="Age" Margin="0,20,0,0" FontWeight="Bold" FontFamily="Arial" FontSize="18" HorizontalAlignment="Center"></Label>
+                                <TextBox 
+                                        x:Name="stAge"
+                                        Text="{Binding Patient.Age}"
+                                        FontSize="18" FontFamily="Arial"
+                                        Background="Transparent"
+                                        BorderBrush="Black" Width="120px"
+                                        BorderThickness="1,1,1,1"
+                                        Margin="0,20,0,0"
+                                        IsReadOnly="True"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Width="120px" Margin="30,0,0,20">
+                                <Label Content="Gender" Margin="0,20,0,0" FontWeight="Bold" FontFamily="Arial" FontSize="18" HorizontalAlignment="Center"></Label>
+                                <TextBox 
+                                        x:Name="stGender"
+                                        Text="{Binding Patient.Gender}"
+                                        FontSize="18" FontFamily="Arial"
+                                        Background="Transparent"
+                                        BorderBrush="Black" Width="120px"
+                                        BorderThickness="1,1,1,1"
+                                        Margin="0,20,0,0"
+                                        IsReadOnly="True"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Width="170px" Margin="30,0,0,20">
+                                <Label Content="Date" Margin="0,20,0,0" FontWeight="Bold" FontFamily="Arial" FontSize="18" HorizontalAlignment="Center"></Label>
+                                <TextBox 
+                                        x:Name="stDate"
+                                        Text="{Binding Patient.Date}"
+                                        FontSize="18" FontFamily="Arial"
+                                        Background="Transparent"
+                                        BorderBrush="Black" Width="170px"
+                                        BorderThickness="1,1,1,1"
+                                        Margin="0,20,0,0"
+                                        IsReadOnly="True"
+                                    >
+
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <StackPanel Height="390">
+                <StackPanel Orientation="Horizontal" Height="40">
+                    <Label Content="Diagnosed With: " Margin="40,0,0,0" FontFamily="Arial" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></Label>
+                    <TextBox    x:Name="diagnosed"
+                                Text="{Binding Diagnosed}"
+                                FontSize="18" FontFamily="Arial"
+                                Background="Transparent"
+                                BorderBrush="Black" Width="800px"
+                                BorderThickness="1,1,1,1"
+                                Margin="20,0,0,0"
+                                />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <DataGrid Margin="20,20,0,0" Width="600" ItemsSource="{Binding Drugdetails}" AutoGenerateColumns="False" FontSize="16" FontFamily="Arial" Height="311">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="150" Header="Drug" Binding="{Binding Drug}" />
+                            <DataGridTextColumn Width="150" Header="Units" Binding="{Binding Unit}" />
+                            <DataGridTextColumn  Width="150" Header="Dosage" Binding="{Binding Dosage}" />
+                            <DataGridTemplateColumn Width="150" Header="Actions">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Delete" Command="{Binding DataContext.DeletePrescriptionCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" CommandParameter="{Binding}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Width="400" Margin="0,15,0,0">
+                        <Label Content="Drug:" FontSize="16" FontFamily="Arial" Width="339"></Label>
+                        <TextBox    x:Name="drug"
+                                    Text="{Binding DrugToAdd}"
+                                    FontSize="18" FontFamily="Arial"
+                                    Background="Transparent"
+                                    BorderBrush="Black" Width="350px"
+                                    BorderThickness="1,1,1,1"
+                                    Margin="20,0,0,0"
+                                    Height="30"
+                         />
+                        <Label Content="Units:" FontSize="16" Margin="0,10,0,0" FontFamily="Arial" Width="339"></Label>
+                        <TextBox    x:Name="unit"
+                                    Text="{Binding UnitToAdd}"
+                                    FontSize="18" FontFamily="Arial"
+                                    Background="Transparent"
+                                    BorderBrush="Black" Width="350px"
+                                    BorderThickness="1,1,1,1"
+                                    Margin="20,0,0,0"
+                                    Height="30"
+                        />
+                        <Label Content="Dosage:" FontSize="16" FontFamily="Arial" Margin="0,10,0,0" Width="339"></Label>
+                        <TextBox    x:Name="dosage"
+                                Text="{Binding DosageToAdd}"
+                                FontSize="18" FontFamily="Arial"
+                                Background="Transparent"
+                                BorderBrush="Black" Width="350px"
+                                BorderThickness="1,1,1,1"
+                                Margin="20,0,0,0"
+                                Height="30"
+                         />
+                        <Button x:Name="add"
+                                    Margin="30,35,0,0"
+                                    Width="150"
+                                    Height="50"
+                                    Content="Add"
+                                    Cursor="Hand"
+                                    Grid.Column="2"
+                                    Foreground="White" FontSize="18" FontFamily="Arial" FontWeight="Bold"
+                                    Command="{Binding AddPrescriptionCommand}" Background="#FF91202D">
+                                                    <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#91202D"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#CC2134"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="150" Height="50" CornerRadius="25" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

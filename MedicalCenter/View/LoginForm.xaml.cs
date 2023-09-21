@@ -34,6 +34,9 @@ namespace MedicalCenter.View
             }
         }
 
+        private void username_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
     }
 }

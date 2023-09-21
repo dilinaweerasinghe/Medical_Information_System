@@ -40,7 +40,7 @@
                         Background="Transparent"
                         BorderBrush="Black" Width="420"
                         BorderThickness="0,0,0,2"
-                        Margin="10"
+                        Margin="10" TextChanged="username_TextChanged"
                         
                     />
                     <Label Content="Password" Width="426" FontSize="22" FontFamily="Arial" Margin="0,20,0,0"></Label>

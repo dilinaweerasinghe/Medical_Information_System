@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace MedicalCenter.ModelView
 {
-    public class LoginCommand : ICommand
+    public class RelayCommand : ICommand
     {
        
 
@@ -15,7 +15,7 @@ namespace MedicalCenter.ModelView
         public Action<object> _Execute{ get; set; }
         public Predicate<object> _CanExecute { get; set; }
 
-        public LoginCommand(Action<object> execute, Predicate<object> predicate)
+        public RelayCommand(Action<object> execute, Predicate<object> predicate)
         {
             _Execute = execute;
             _CanExecute = predicate;
